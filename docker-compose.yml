@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+
+  demo-sql-db:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 1433:1433    
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=yourStrong(!)Password
+      
+    container_name: demo-sql-db

@@ -64,6 +64,7 @@
     <Folder Include="dbo\Stored Procedures\" />
     <Folder Include="dbo\Functions\" />
     <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Supplier.sql" />
@@ -72,5 +73,8 @@
     <Build Include="dbo\Stored Procedures\usp_AddProduct.sql" />
     <Build Include="dbo\Stored Procedures\usp_GetDate.sql" />
     <Build Include="dbo\Views\uw_Product.sql" />
+    <Build Include="Security\dbsafe.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="Security\dbsafe_loging.sql" />
   </ItemGroup>
 </Project>
