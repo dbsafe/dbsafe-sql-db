@@ -12,5 +12,7 @@ services:
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=yourStrong(!)Password
+      - DBSAFE_PASSWORD=dbsafe
+      - DBSAFE_USER=dbsafe
       
     container_name: demo-sql-db
