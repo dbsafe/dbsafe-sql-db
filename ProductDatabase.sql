@@ -307,6 +307,7 @@ CREATE TABLE [dbo].[Product] (
     [CategoryId]  INT            NOT NULL,
     [SupplierId]  INT            NOT NULL,
     [ReleaseDate] DATE           NULL,
+    [IsActive]    BIT            NOT NULL,
     [CreatedOn]   DATETIME2 (7)  NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
@@ -325,6 +326,15 @@ CREATE TABLE [dbo].[Supplier] (
     [ContactEmail] VARCHAR (255)  NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
+
+
+GO
+PRINT N'Creating Default Constraint unnamed constraint on [dbo].[Product]...';
+
+
+GO
+ALTER TABLE [dbo].[Product]
+    ADD DEFAULT 1 FOR [IsActive];
 
 
 GO

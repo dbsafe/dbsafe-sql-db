@@ -8,6 +8,7 @@
     [CategoryId]  INT            NOT NULL,
     [SupplierId]  INT            NOT NULL,
     [ReleaseDate] DATE NULL, 
+    [IsActive] BIT NOT NULL DEFAULT 1, 
     [CreatedOn] DATETIME2 NULL, 
     PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [FK_Product_Category] FOREIGN KEY ([CategoryId]) REFERENCES [dbo].[Category] ([Id]),
